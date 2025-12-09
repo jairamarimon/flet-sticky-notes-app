@@ -1,81 +1,73 @@
-# FletProject app
+# Flet Sticky Notes App 📝
 
-## Run the app
+A simple **sticky notes application** built with **Python + Flet + SQLite**.  
+You can add, edit, and delete notes, and all notes are **persistently stored** in a local SQLite database.
 
-### uv
+---
 
-Run as a desktop app:
+## Features
 
-```
-uv run flet run
-```
+- Add new notes
+- Edit existing notes
+- Delete notes
+- Persistent storage using SQLite
+- Modern UI with Flet
+- Lightweight and cross-platform
 
-Run as a web app:
+---
 
-```
-uv run flet run --web
-```
+## Installation
 
-### Poetry
+1. Clone the repository via SSH:
 
-Install dependencies from `pyproject.toml`:
+   ```bash
+   git clone git@github.com:jairamarimon/flet-sticky-notes-app.git
+   cd flet-sticky-notes-app
+   ```
+   
+2. Create a Python virtual environment (recommended):
 
-```
-poetry install
-```
+    ```bash
+    python -m venv .venv
+    ```
+    Activate the virtual environment:
+    
+    macOS/Linux:
+    
+      ```bash
+      source .venv/bin/activate
+      ```
+    Windows:
+    
+      ```bash
+      .venv\Scripts\activate
+      ```
+3. Install dependencies:
 
-Run as a desktop app:
+    ```bash
+    pip install flet
+    ```
+---
 
-```
-poetry run flet run
-```
+## Usage
+Run the app:
 
-Run as a web app:
-
-```
-poetry run flet run --web
-```
-
-For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/getting-started/).
-
-## Build the app
-
-### Android
-
-```
-flet build apk -v
-```
-
-For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
-
-### iOS
-
-```
-flet build ipa -v
-```
-
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
-
-### macOS
-
-```
-flet build macos -v
+```bash
+flet run
 ```
 
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
+- Add a note in the text field and click Add Note.
+- Edit a note by clicking the Edit button.
+- Delete a note by clicking the Delete button.
+- All notes are automatically saved in notes.db.
 
-### Linux
-
+---
+## Project Structure
+```bash
+notes_app/
+│── main.py        # App entry point
+│── db.py          # SQLite database functions
+│── ui.py          # Flet UI components
+│── notes.db       # SQLite database (auto-created)
+│── README.md      # This file
 ```
-flet build linux -v
-```
-
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
-
-### Windows
-
-```
-flet build windows -v
-```
-
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
